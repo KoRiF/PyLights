@@ -1,0 +1,8 @@
+Bitmap_1 BITMAP "images\\bmp\\16\\meteostat_logo16.bmp"
+Bitmap_2 BITMAP "images\\bmp\\24\\meteostat_logo24.bmp"
+Bitmap_3 BITMAP "images\\bmp\\32\\meteostat_logo32.bmp"
+Bitmap_4 BITMAP "images\\bmp\\128\\meteostat_logo128.bmp"
+PngImage_1 RCDATA "images\\png\\16x16\\meteostat_logo16.png"
+PngImage_2 RCDATA "images\\png\\24x24\\meteostat_logo24.png"
+PngImage_3 RCDATA "images\\png\\32x32\\meteostat_logo32.png"
+PngImage_4 RCDATA "images\\png\\128x128\\meteostat_logo128.png"

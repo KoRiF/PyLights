@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{1B7ED789-CA61-4D8A-A9A9-57F0D6D278F6}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Meteostat\P4DMeteostat.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Meteostat\dclP4DMeteostat.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="P4DMeteostat">
+        <MSBuild Projects="Meteostat\P4DMeteostat.dproj"/>
+    </Target>
+    <Target Name="P4DMeteostat:Clean">
+        <MSBuild Projects="Meteostat\P4DMeteostat.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="P4DMeteostat:Make">
+        <MSBuild Projects="Meteostat\P4DMeteostat.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="dclP4DMeteostat">
+        <MSBuild Projects="Meteostat\dclP4DMeteostat.dproj"/>
+    </Target>
+    <Target Name="dclP4DMeteostat:Clean">
+        <MSBuild Projects="Meteostat\dclP4DMeteostat.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="dclP4DMeteostat:Make">
+        <MSBuild Projects="Meteostat\dclP4DMeteostat.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="P4DMeteostat;dclP4DMeteostat"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="P4DMeteostat:Clean;dclP4DMeteostat:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="P4DMeteostat:Make;dclP4DMeteostat:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
